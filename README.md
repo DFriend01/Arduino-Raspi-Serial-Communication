@@ -4,11 +4,14 @@
 
 Using serial communication to send data from an Arduino to a Raspberry Pi. The application in this project uses the Arduino
 as a transmitting device that reads a switch configuration set by the user. The configuration is interpreted as a binary
-number, and is sent to the Raspberry Pi where it lights the LEDs according to the switch configuration.
+number and is sent to the Raspberry Pi where it lights the LEDs according to the switch configuration.
 
 # Hardware
 
 <img src="docs/schematic.jpg" width="800">
+
+Note that the pushbutton must be connected to a specific pin for interrupts to work properly. This may vary from board to
+board. Refer to [this](https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/) resource for more information.
 
 ## Components
 
@@ -31,8 +34,8 @@ number, and is sent to the Raspberry Pi where it lights the LEDs according to th
 - [pyserial](https://pyserial.readthedocs.io/en/latest/)
 
 # References
-1. [[The Robotics Back-End](https://roboticsbackend.com/raspberry-pi-arduino-serial-communication/)] Introduces the `pyserial` API and how to use it to communication with other devices like the Arduino.
+1. [[The Robotics Back-End](https://roboticsbackend.com/raspberry-pi-arduino-serial-communication/)] Introduces the `pyserial` API and how to use it to communicate with other devices like the Arduino.
 
-2. [[Raspberry Pi Physical Computing Tutorial](https://projects.raspberrypi.org/en/projects/physical-computing)] Demonstrates how to use the `gpiozero` API to use the GPIO pins on the raspberry pi to control LEDs.
+2. [[Raspberry Pi Physical Computing Tutorial](https://projects.raspberrypi.org/en/projects/physical-computing)] Demonstrates how to use the `gpiozero` API and use the GPIO pins on the raspberry pi to control LEDs.
 
 3. [[Raspberry Pi GPIO Pinout](https://pinout.xyz/#)] Documentation for the GPIO pins on the raspberry pi.
